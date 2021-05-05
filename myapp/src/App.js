@@ -4,9 +4,9 @@ class App extends Component {
   // Start: State
   state = {
     ninjas: [
-      { id: 1, name: "name1", age: 1, belt: "belt1" },
-      { id: 2, name: "name2", age: 2, belt: "belt2" },
-      { id: 3, name: "name3", age: 3, belt: "belt3" },
+      { id: 1, name: "name1", age: 30, belt: "belt1" },
+      { id: 2, name: "name2", age: 15, belt: "belt2" },
+      { id: 3, name: "name3", age: 17, belt: "belt3" },
     ]
   }
   // End: State
