@@ -26,13 +26,48 @@
 
     <script type="text/babel">
       class App extends React.Component {
+        // Start: State
+        state = {
+          name: "name",
+          age: 10,
+        };
+        // End: State
+
+        // Start: Functions
+        handleClick(e) {
+          console.log(e.target);
+        }
+
+        //outputs the html element tag, as well as the different properties of the event object
+        handleMouseOver(e) {
+          console.log(e.target, e, e.pageX);
+        }
+
+        //triggered when text with this method gets copied
+        handleCopy(e) {
+          console.log("Copied text!");
+        }
+        // End: Functions
+
+        // Start: Render
         render() {
           return (
             <div className="app-content">
               <h1>Hello World</h1>
+              <p>{Math.random() * 10}</p>
+              <p>Name: {this.state.name}</p>
+              <p>Age: {this.state.age}</p>
+
+              {/*Start: DOM Events*/}
+              <button onClick={this.handleClick}>onClick</button>
+              <button onMouseOver={this.handleMouseOver}>onMouseOver</button>
+              <p onCopy={this.handleCopy}>onCopy</p>
+
+              {/*End: DOM Events*/}
             </div>
           );
         }
+        // End: Render
       }
 
       ReactDOM.render(<App />, document.getElementById("app"));
