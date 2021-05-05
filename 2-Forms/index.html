@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Start: React CDN -->
+    <script
+      crossorigin
+      src="https://unpkg.com/react@17/umd/react.development.js"
+    ></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"
+    ></script>
+    <!-- End: React CDN -->
+    <!-- Start: Babel -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <!-- End: Babel -->
+
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="app"></div>
+
+    <script type="text/babel">
+      class App extends React.Component {
+        // Start: State
+        state = {
+          name: "name",
+        };
+        // End: State
+
+        // Start: Functions
+        handleChange = (e) => {
+          this.setState({
+            name: e.target.value,
+          });
+        };
+
+        handleSubmit = (e) => {
+          e.preventDefault();
+          console.log("form submitted", this.state.name);
+        };
+        // End: Functions
+
+        // Start: Render
+        render() {
+          return (
+            <div className="app-content">
+              <h1>Hello World</h1>
+              {/*Start: Info*/}
+              <p>{this.state.name}</p>
+              {/*End: Info*/}
+
+              {/*Start: Form*/}
+              <form onSubmit={this.handleSubmit}>
+                <input type="text" onChange={this.handleChange} />
+                <button>Submit</button>
+              </form>
+              {/*End: Form*/}
+            </div>
+          );
+        }
+        // End: Render
+      }
+
+      ReactDOM.render(<App />, document.getElementById("app"));
+    </script>
+  </body>
+</html>
