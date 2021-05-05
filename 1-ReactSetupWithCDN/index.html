@@ -34,19 +34,22 @@
         // End: State
 
         // Start: Functions
-        handleClick(e) {
-          console.log(e.target);
-        }
+        handleClick = (e) => {
+          this.setState({
+            name: "another name",
+          });
+          console.log(e.target, this.state);
+        };
 
         //outputs the html element tag, as well as the different properties of the event object
-        handleMouseOver(e) {
+        handleMouseOver = (e) => {
           console.log(e.target, e, e.pageX);
-        }
+        };
 
         //triggered when text with this method gets copied
-        handleCopy(e) {
+        handleCopy = (e) => {
           console.log("Copied text!");
-        }
+        };
         // End: Functions
 
         // Start: Render
