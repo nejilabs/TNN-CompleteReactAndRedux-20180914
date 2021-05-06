@@ -5,6 +5,26 @@ import { connect } from 'react-redux'
 
 import ReactLogo from '../assets/Sample.png'
 class Home extends Component {
+  // Start:State
+  // state = {
+  //   posts: []
+  // }
+  // End:State
+
+  // Start:Lifecycle Methods
+  // componentDidMount() {
+  //   axios.get('https://jsonplaceholder.typicode.com/posts')
+  //     .then(res => {
+  //       this.setState({
+  //         posts: res.data
+  //       })
+  //     })
+  // }
+  // End:Lifecycle Methods
+
+  // Start:Methods
+  // End:Methods
+
   // Start:Template
   render() {
     const { posts } = this.props;
