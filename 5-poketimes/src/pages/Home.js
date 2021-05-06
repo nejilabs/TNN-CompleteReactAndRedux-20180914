@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 import axios from 'axios'
+
+import ReactLogo from '../assets/Sample.png'
 class Home extends Component {
   // Start:State
   state = {
@@ -30,6 +32,7 @@ class Home extends Component {
         return (
           <div className="post card" key={post.id}>
             <div className="card-content">
+              <img src={ReactLogo} alt={post.title}></img>
               <Link to={`/posts/${post.id}`} className="card-title">{post.title}</Link>
               <p>{post.body}</p>
             </div>
