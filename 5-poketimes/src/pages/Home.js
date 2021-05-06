@@ -33,7 +33,7 @@ class Home extends Component {
           <div className="post card" key={post.id}>
             <div className="card-content">
               <img src={ReactLogo} alt={post.title}></img>
-              <Link to={`/posts/${post.id}`} className="card-title">{post.title}</Link>
+              <Link to={`/posts/${post.id}`} className="card-title red-text">{post.title}</Link>
               <p>{post.body}</p>
             </div>
           </div>
@@ -45,7 +45,7 @@ class Home extends Component {
 
 
     return (
-      <div className="container">
+      <div className="container home">
         <h4 className="center">Home</h4>
         {postList}
       </div>
