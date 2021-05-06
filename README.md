@@ -8,4 +8,5 @@ Description: In this complete React tutorial series, we'll cover all the basics 
 
 Remarks:
 Next Part: TNN-ReactJSReduxFirebase-ProjectManagementToolwithAuthandCloudFunctions-20181025 - The Net Ninja - React, Redux & Firebase App Tutorial (Oct 25, 2018)
+
 Link: https://www.youtube.com/playlist?list=PL4cUxeGkcC9iWstfXntcj8f-dFZ4UtlN3
