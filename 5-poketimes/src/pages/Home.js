@@ -1,32 +1,13 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
-import axios from 'axios'
+
+import { connect } from 'react-redux'
 
 import ReactLogo from '../assets/Sample.png'
 class Home extends Component {
-  // Start:State
-  state = {
-    posts: []
-  }
-  // End:State
-
-  // Start:Lifecycle Methods
-  componentDidMount() {
-    axios.get('https://jsonplaceholder.typicode.com/posts')
-      .then(res => {
-        this.setState({
-          posts: res.data
-        })
-      })
-  }
-  // End:Lifecycle Methods
-
-  // Start:Methods
-  // End:Methods
-
   // Start:Template
   render() {
-    const { posts } = this.state;
+    const { posts } = this.props;
     const postList = posts.length ? (
       posts.map(post => {
         return (
@@ -55,4 +36,13 @@ class Home extends Component {
 
 }
 
-export default Home
+// Start: Methods
+const mapStateToProps = (state) => {
+  return {
+    posts: state.posts
+  }
+}
+// End: Methods
+
+
+export default connect(mapStateToProps)(Home)
